@@ -17,7 +17,7 @@ app.get('/', function(req, res){
     // }
 
     var today = new Date();
-    console.log(today.toLocaleDateString("en-US"));
+    // console.log(today.toLocaleDateString("en-US"));
 
     // res.send(day)
     res.render("list", {
