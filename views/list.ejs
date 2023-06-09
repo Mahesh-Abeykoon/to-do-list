@@ -8,5 +8,15 @@
 </head>
 <body>
     <h1>Hellow there! Today is <%= dayIs %>!</h1>
+    <ul>
+        <% for(var i = 1; i<dayItems.length; i++){ %>
+           <li> <%= dayItems[i] %></li> 
+        <% } %>
+
+    </ul>
+    <form class="" action="/" method="post">
+        <input type="text" name="newItem">
+        <button type="submit" name="button">Add</button>
+    </form>
 </body>
 </html>
