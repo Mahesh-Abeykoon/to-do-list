@@ -46,6 +46,9 @@ app.post("/work", function(req, res){
     res.redirect("/work");
 })
 
+app.get("/about", function(req, res){
+    res.render("about");
+})
 app.listen(port, function(){
     console.log("App is Running on port : "+port);
 });
