@@ -15,17 +15,19 @@ app.set('view engine','ejs');
 
 app.get('/', function(req, res){
 
-    var options = { day: "numeric", year: "numeric", month: "long" }
-
     var today = new Date();
+
+    var options = { day: "numeric", year: "numeric", month: "long" }
     
+    var day = today.toLocaleDateString("en-US", options);
     // console.log(today.toLocaleDateString("en-US"));
-    res.render("list", { listTitle: today, newListItem: items });
+    res.render("list", { listTitle: day, newListItem: items });
 });
 
 app.post("/", function(req,res){
     let item = req.body.newItem;
-
+    // console.log(req.body)
+ 
     if(req.body.list === "Work"){
         workItems.push(item);
         res.redirect("/work")
